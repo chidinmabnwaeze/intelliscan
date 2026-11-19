@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import logoLight from "./assets/1_page-0001.jpg";
 import logoDark from "./assets/2_page-0001.jpg";
-import intelliscanDevice from "./assets/INTELLISCAN 2.png";
+import intelliscanDevice from "./assets/intelliscan-device.webp";
+import HeroScanner from "./HeroScanner";
 import orangeProduce from "./assets/orange.jpg";
 import "./App.css";
 
@@ -259,49 +260,7 @@ function App() {
 
           <div className="relative mx-auto w-full max-w-[520px] lg:mx-0 lg:justify-self-end">
             <div className="absolute -left-12 top-12 h-36 w-36 rounded-full bg-[#86c83f]/20 blur-3xl" />
-            <div className="device-shell relative mx-auto w-[78%] max-w-[360px] rounded-[38px] p-3 shadow-[0_35px_70px_-25px_rgba(16,32,24,.38)]">
-              <div className="relative overflow-hidden rounded-[28px] border-[8px] border-[#15211b] bg-[#dfe7d9]">
-                <div className="absolute inset-x-0 top-0 z-10 flex h-9 items-center justify-between px-4 text-[9px] font-bold text-[#1f3026]">
-                  <span>INTELLISCAN</span>
-                  <span className="h-2 w-2 rounded-full bg-[#39a85a]" />
-                </div>
-                <div className="scan-stage relative h-[440px] sm:h-[510px]">
-                  {/* <div className="produce-piece piece-one" />
-                  <div className="produce-piece piece-two" />
-                  <div className="produce-piece piece-three" />
-                  <div className="produce-piece piece-four" /> */}
-                  <img src={intelliscanDevice} alt="Intelliscan device" />
-                  <div className="scan-line" />
-                  <div className="absolute bottom-4 left-4 right-4 z-20 rounded-2xl bg-[#102018]/92 p-4 text-white backdrop-blur">
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <p className="text-[9px] uppercase tracking-[0.16em] text-white/60">
-                          Result
-                        </p>
-                        <p className="mt-1 text-sm font-bold">Premium Grade</p>
-                      </div>
-                      <div className="grid h-10 w-10 place-items-center rounded-full bg-[#86c83f] text-xs font-bold">
-                        96%
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="absolute -right-8 top-[43%] h-16 w-3 rounded-r-lg bg-[#26352d]" />
-              <div className="absolute -left-3 top-[31%] h-10 w-2 rounded-l-lg bg-[#26352d]" />
-            </div>
-
-            <div className="float-card absolute -right-1 top-20 hidden w-44 rounded-2xl border border-white/70 bg-white/92 p-4 shadow-xl sm:block">
-              <div className="flex items-center gap-3">
-                <span className="grid h-9 w-9 place-items-center rounded-full bg-[#eef7e8] text-[#0d7a38]">
-                  <ScanIcon />
-                </span>
-                <div>
-                  <p className="text-[10px] text-[#778279]">Confidence</p>
-                  <p className="text-sm font-bold">High</p>
-                </div>
-              </div>
-            </div>
+            <HeroScanner />
           </div>
         </div>
       </section>

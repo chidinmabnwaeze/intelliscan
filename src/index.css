@@ -24,7 +24,7 @@ button {
     content: "";
     position: absolute;
     inset: 0;
-    background: url("./assets/INTELLISCAN.png") center/cover no-repeat;
+    background: url("./assets/intelliscan-device-dark.webp") center/cover no-repeat;
     /* opacity: 0.1; */
     z-index: -1;
 }
