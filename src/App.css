@@ -1,0 +1,243 @@
+@keyframes scan {
+
+    0%,
+    100% {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    12%,
+    88% {
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(330px);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.hero-grid {
+    background-image: linear-gradient(rgba(16, 32, 24, .045) 1px, transparent 1px), linear-gradient(90deg, rgba(16, 32, 24, .045) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: linear-gradient(to bottom, black, transparent 82%);
+}
+
+.device-shell {
+    background: linear-gradient(145deg, #3b4a41, #17251e);
+}
+
+.scan-stage {
+    background:
+        radial-gradient(circle at 28% 31%, rgba(255, 255, 255, .8) 0 3%, transparent 3.5%),
+        linear-gradient(145deg, #edf3e8, #c8d7bc);
+}
+
+.produce-piece {
+    position: absolute;
+    border-radius: 55% 45% 48% 52% / 62% 55% 45% 38%;
+    background: linear-gradient(135deg, #a85d2d 0%, #6f3421 70%, #44291f 100%);
+    box-shadow: inset -12px -12px 18px rgba(60, 32, 20, .28), inset 8px 8px 12px rgba(255, 210, 149, .14);
+}
+
+.piece-one {
+    width: 112px;
+    height: 150px;
+    left: 22%;
+    top: 22%;
+    transform: rotate(-18deg);
+}
+
+.piece-two {
+    width: 92px;
+    height: 128px;
+    right: 16%;
+    top: 17%;
+    transform: rotate(25deg);
+}
+
+.piece-three {
+    width: 82px;
+    height: 115px;
+    left: 18%;
+    bottom: 18%;
+    transform: rotate(12deg);
+}
+
+.piece-four {
+    width: 102px;
+    height: 138px;
+    right: 20%;
+    bottom: 19%;
+    transform: rotate(-8deg);
+}
+
+.scan-line {
+    position: absolute;
+    z-index: 5;
+    left: 8%;
+    right: 8%;
+    height: 2px;
+    background: #86c83f;
+    box-shadow: 0 0 14px 4px rgba(134, 200, 63, .55);
+    animation: scan 4s ease-in-out infinite;
+}
+
+.float-card {
+    animation: float 4s ease-in-out infinite;
+}
+
+.avatar {
+    display: grid;
+    width: 38px;
+    height: 38px;
+    place-items: center;
+    border: 3px solid #f7f8f3;
+    border-radius: 999px;
+    color: white;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.section-kicker {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: #0d7a38;
+}
+
+.step-line {
+    position: absolute;
+    top: 30px;
+    left: 15%;
+    right: 15%;
+    height: 1px;
+    background: repeating-linear-gradient(90deg, #aeb9b1 0 8px, transparent 8px 14px);
+}
+
+.step-place,
+.step-analyse,
+.step-result {
+    position: relative;
+    overflow: hidden;
+}
+
+.step-place {
+    background: linear-gradient(145deg, #edf3e8, #cad9bd);
+}
+
+.step-place::before {
+    content: "";
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(18deg);
+    border-radius: 55% 45% 48% 52%;
+    background: linear-gradient(135deg, #ad6935, #664025);
+}
+
+.step-analyse {
+    background: #102018;
+}
+
+.step-analyse::before {
+    content: "";
+    position: absolute;
+    inset: 15px 25%;
+    border: 2px solid #86c83f;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(134, 200, 63, .2);
+}
+
+.step-analyse::after {
+    content: "";
+    position: absolute;
+    left: 23%;
+    right: 23%;
+    height: 2px;
+    top: 50%;
+    background: #86c83f;
+    box-shadow: 0 0 12px #86c83f;
+}
+
+.step-result {
+    background: linear-gradient(135deg, #e8f3df, #c9dfb9);
+}
+
+.step-result::before {
+    content: "96%  PREMIUM";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+    background: #102018;
+    padding: 15px 12px;
+    color: white;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .08em;
+}
+
+.applications-visual {
+    background: linear-gradient(145deg, #0d7a38, #102018);
+}
+
+.applications-visual::before,
+.applications-visual::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: rgba(134, 200, 63, .18);
+    filter: blur(2px);
+}
+
+.applications-visual::before {
+    left: -50px;
+    bottom: -70px;
+}
+
+.applications-visual::after {
+    right: -60px;
+    top: -70px;
+}
+
+@media (max-width: 639px) {
+    .piece-one {
+        width: 84px;
+        height: 118px;
+    }
+
+    .piece-two {
+        width: 72px;
+        height: 102px;
+    }
+
+    .piece-three {
+        width: 66px;
+        height: 92px;
+    }
+
+    .piece-four {
+        width: 78px;
+        height: 108px;
+    }
+}
