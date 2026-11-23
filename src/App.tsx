@@ -4,6 +4,9 @@ import logoDark from "./assets/2_page-0001.jpg";
 import intelliscanDevice from "./assets/intelliscan-device.webp";
 import HeroScanner from "./HeroScanner";
 import orangeProduce from "./assets/orange.jpg";
+import innov8Logo from "./assets/cropped-Innov8-LOGO (1).png";
+import universityLogo from "./assets/makurdi uni.jpg";
+import teamPhoto from "./assets/Inteliscan.jpg";
 import "./App.css";
 
 const navItems = [
@@ -12,6 +15,8 @@ const navItems = [
   ["How it works", "how-it-works"],
   ["Applications", "applications"],
   ["About", "about"],
+  ["Partners", "partners"],
+  ["Team", "team"],
 ];
 
 function ArrowIcon({ className = "h-5 w-5" }: { className?: string }) {
@@ -454,6 +459,74 @@ function App() {
                 ),
               )}
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="partners" className="scroll-mt-20 py-20 sm:py-24">
+        <div className="mx-auto max-w-[1180px] px-5 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="section-kicker">Our partners</p>
+            <h2 className="mt-5 text-4xl font-bold tracking-[-0.04em] sm:text-5xl">
+              Partners & Support
+            </h2>
+          </div>
+          <div className="mt-14 grid gap-5 sm:grid-cols-2">
+            {[
+              {
+                src: innov8Logo,
+                alt: "Innov8 logo",
+                name: "Innov8 Hub",
+              },
+              {
+                src: universityLogo,
+                alt: "Joseph Sarwuan Tarka University, Makurdi crest",
+                name: "Joseph Sarwuan Tarka University, Makurdi",
+              },
+            ].map((partner) => (
+              <article
+                key={partner.name}
+                className="flex flex-col items-center justify-center gap-6 rounded-[24px] bg-white p-10 shadow-[0_15px_50px_-25px_rgba(16,32,24,.22)] transition duration-300 hover:-translate-y-1"
+              >
+                <div className="flex h-36 w-full items-center justify-center">
+                  <img
+                    src={partner.src}
+                    alt={partner.alt}
+                    className="max-h-full max-w-[260px] object-contain"
+                  />
+                </div>
+                <p className="text-center text-sm font-semibold text-[#526156]">
+                  {partner.name}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="team"
+        className="scroll-mt-20 bg-[#102018] py-20 text-white sm:py-24"
+      >
+        <div className="mx-auto max-w-[1180px] px-5 lg:px-8">
+          <div className="grid gap-10 lg:grid-cols-[.75fr_1.25fr] lg:items-end">
+            <div>
+              <p className="section-kicker text-[#86c83f]">The team</p>
+              <h2 className="mt-5 text-4xl font-bold leading-tight tracking-[-0.04em] sm:text-5xl">
+                The people behind Intelliscan.
+              </h2>
+            </div>
+            <p className="max-w-xl text-base leading-7 text-white/65 lg:justify-self-end">
+              A dedicated team bringing together agriculture, engineering and
+              AI to make produce quality inspection simpler and more reliable.
+            </p>
+          </div>
+          <div className="mt-14 overflow-hidden rounded-[32px] ring-1 ring-white/10">
+            <img
+              src={teamPhoto}
+              alt="The Intelliscan team"
+              className="h-auto w-full object-cover"
+            />
           </div>
         </div>
       </section>
