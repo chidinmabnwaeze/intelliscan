@@ -7,6 +7,7 @@ import orangeProduce from "./assets/orange.jpg";
 import innov8Logo from "./assets/cropped-Innov8-LOGO (1).png";
 import universityLogo from "./assets/makurdi uni.jpg";
 import teamPhoto from "./assets/Inteliscan.jpg";
+import tetfundLogo from "./assets/tetfund.png";
 import "./App.css";
 
 const navItems = [
@@ -471,8 +472,13 @@ function App() {
               Partners & Support
             </h2>
           </div>
-          <div className="mt-14 grid gap-5 sm:grid-cols-2">
+          <div className="mt-14 grid gap-5 sm:grid-cols-3">
             {[
+                 {
+                src: tetfundLogo,
+                alt: "Tetfund Logo",
+                name: "Tetfund",
+              },
               {
                 src: innov8Logo,
                 alt: "Innov8 logo",
